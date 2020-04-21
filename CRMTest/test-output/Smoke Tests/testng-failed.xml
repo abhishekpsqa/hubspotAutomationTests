@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke Tests]">
+  <test thread-count="5" name="Hub spot Smoke tests(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.crm.testcases.LoginTest">
+        <methods>
+          <include name="testLoginInCRM"/>
+        </methods>
+      </class> <!-- com.crm.testcases.LoginTest -->
+      <class name="com.crm.testcases.HomeTest">
+        <methods>
+          <include name="testHomePageUrl"/>
+        </methods>
+      </class> <!-- com.crm.testcases.HomeTest -->
+    </classes>
+  </test> <!-- Hub spot Smoke tests(failed) -->
+</suite> <!-- Failed suite [Smoke Tests] -->

@@ -1,0 +1,4 @@
+com\crm\testcases\HomeTest.class
+com\crm\testcases\LoginTest.class
+com\crm\testcases\ContactsTest.class
+com\crm\testcases\CompaniesTest.class

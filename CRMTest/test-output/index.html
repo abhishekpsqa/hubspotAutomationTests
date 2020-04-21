@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Regression_Tests">
+              <span class="suite-name border-passed">Regression Tests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Regression_Tests">
+                    <span>C:\Users\DG1S5M2\eclipse-workspace\CRMTest\src\main\resources\testSuites\RegressionTests.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Regression_Tests">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Regression_Tests">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Regression_Tests">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Regression_Tests">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Regression_Tests">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Regression_Tests">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">11 methods,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Regression_Tests" class="hide-methods passed suite-Regression_Tests"> (hide)</a> <!-- hide-methods passed suite-Regression_Tests -->
+                      <a href="#" panel-name="suite-Regression_Tests" class="show-methods passed suite-Regression_Tests"> (show)</a> <!-- show-methods passed suite-Regression_Tests -->
+                    </span>
+                    <div class="method-list-content passed suite-Regression_Tests">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testContactsTitle">testContactsTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.HomeTest" hash-for-method="testHomePageHeaderDropdownLinks">testHomePageHeaderDropdownLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.HomeTest" hash-for-method="testHomePageUrl">testHomePageUrl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testIfContactsCreated">testIfContactsCreated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.LoginTest" hash-for-method="testLoginInCRM">testLoginInCRM</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.CompaniesTest" hash-for-method="testSignOut">testSignOut</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testcreateContacts(Deepak@web.com, Deepak, Fatnani, Engineer, 7852469851, In progress)">testcreateContacts(Deepak@web.com, Deepak, Fatnani, Engineer, 7852469851, In progress)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testcreateContacts(priyal@web.com, Priyal, Patel, Pharma, 1452357894, Open)">testcreateContacts(priyal@web.com, Priyal, Patel, Pharma, 1452357894, Open)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testcreateContacts(Jaydeep@web.com, Jaydeep, Jani, Engineer, 8742469851, Connected)">testcreateContacts(Jaydeep@web.com, Jaydeep, Jani, Engineer, 8742469851, Connected)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testcreateContacts(abhi@web.com, Abhi, Patel, Engineer, 3214785124, New)">testcreateContacts(abhi@web.com, Abhi, Patel, Engineer, 3214785124, New)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Tests" title="com.crm.testcases.ContactsTest" hash-for-method="testcreateContacts(Khushali@web.com, Khushali, Patel, MBA, 9854712487, Connected)">testcreateContacts(Khushali@web.com, Khushali, Patel, MBA, 9854712487, Connected)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Regression_Tests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Regression_Tests" class="panel Regression_Tests">
+          <div class="suite-Regression_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.testcases.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHomePageHeaderDropdownLinks">
+                  </a> <!-- testHomePageHeaderDropdownLinks -->
+                  <span class="method-name">testHomePageHeaderDropdownLinks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHomePageUrl">
+                  </a> <!-- testHomePageUrl -->
+                  <span class="method-name">testHomePageUrl</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Tests-class-passed -->
+          <div class="suite-Regression_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.testcases.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginInCRM">
+                  </a> <!-- testLoginInCRM -->
+                  <span class="method-name">testLoginInCRM</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Tests-class-passed -->
+          <div class="suite-Regression_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.testcases.ContactsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testContactsTitle">
+                  </a> <!-- testContactsTitle -->
+                  <span class="method-name">testContactsTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIfContactsCreated">
+                  </a> <!-- testIfContactsCreated -->
+                  <span class="method-name">testIfContactsCreated</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testcreateContacts(Deepak@web.com, Deepak, Fatnani, Engineer, 7852469851, In progress)">
+                  </a> <!-- testcreateContacts(Deepak@web.com, Deepak, Fatnani, Engineer, 7852469851, In progress) -->
+                  <span class="method-name">testcreateContacts</span>
+                  <span class="parameters">(Deepak@web.com, Deepak, Fatnani, Engineer, 7852469851, In progress)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testcreateContacts(priyal@web.com, Priyal, Patel, Pharma, 1452357894, Open)">
+                  </a> <!-- testcreateContacts(priyal@web.com, Priyal, Patel, Pharma, 1452357894, Open) -->
+                  <span class="method-name">testcreateContacts</span>
+                  <span class="parameters">(priyal@web.com, Priyal, Patel, Pharma, 1452357894, Open)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testcreateContacts(Jaydeep@web.com, Jaydeep, Jani, Engineer, 8742469851, Connected)">
+                  </a> <!-- testcreateContacts(Jaydeep@web.com, Jaydeep, Jani, Engineer, 8742469851, Connected) -->
+                  <span class="method-name">testcreateContacts</span>
+                  <span class="parameters">(Jaydeep@web.com, Jaydeep, Jani, Engineer, 8742469851, Connected)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testcreateContacts(abhi@web.com, Abhi, Patel, Engineer, 3214785124, New)">
+                  </a> <!-- testcreateContacts(abhi@web.com, Abhi, Patel, Engineer, 3214785124, New) -->
+                  <span class="method-name">testcreateContacts</span>
+                  <span class="parameters">(abhi@web.com, Abhi, Patel, Engineer, 3214785124, New)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testcreateContacts(Khushali@web.com, Khushali, Patel, MBA, 9854712487, Connected)">
+                  </a> <!-- testcreateContacts(Khushali@web.com, Khushali, Patel, MBA, 9854712487, Connected) -->
+                  <span class="method-name">testcreateContacts</span>
+                  <span class="parameters">(Khushali@web.com, Khushali, Patel, MBA, 9854712487, Connected)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Tests-class-passed -->
+          <div class="suite-Regression_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.testcases.CompaniesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignOut">
+                  </a> <!-- testSignOut -->
+                  <span class="method-name">testSignOut</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Tests-class-passed -->
+        </div> <!-- panel Regression_Tests -->
+        <div panel-name="test-xml-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\DG1S5M2\eclipse-workspace\CRMTest\src\main\resources\testSuites\RegressionTests.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Regression Tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Hub spot regression tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.crm.testcases.CompaniesTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.testcases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.testcases.ContactsTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.testcases.HomeTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Hub spot regression tests --&gt;
+&lt;/suite&gt; &lt;!-- Regression Tests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Regression Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Hub spot regression tests (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Regression Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testHomePageUrl</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testLoginInCRM</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Regression Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Regression_Tests');
+function tableData_Regression_Tests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(11);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testLoginInCRM')
+data.setCell(0, 2, 'com.crm.testcases.LoginTest')
+data.setCell(0, 3, 19310);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testIfContactsCreated')
+data.setCell(1, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(1, 3, 17519);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testcreateContacts')
+data.setCell(2, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(2, 3, 9787);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testcreateContacts')
+data.setCell(3, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(3, 3, 8782);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testcreateContacts')
+data.setCell(4, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(4, 3, 8207);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testContactsTitle')
+data.setCell(5, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(5, 3, 8039);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testcreateContacts')
+data.setCell(6, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(6, 3, 7323);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testcreateContacts')
+data.setCell(7, 2, 'com.crm.testcases.ContactsTest')
+data.setCell(7, 3, 7065);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testHomePageHeaderDropdownLinks')
+data.setCell(8, 2, 'com.crm.testcases.HomeTest')
+data.setCell(8, 3, 4903);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testHomePageUrl')
+data.setCell(9, 2, 'com.crm.testcases.HomeTest')
+data.setCell(9, 3, 4810);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testSignOut')
+data.setCell(10, 2, 'com.crm.testcases.CompaniesTest')
+data.setCell(10, 3, 2858);
+window.suiteTableData['Regression_Tests']= { tableData: data, tableDiv: 'times-div-Regression_Tests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Regression_Tests">
+              </div> <!-- times-div-Regression_Tests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Regression Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Regression_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.testcases.CompaniesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSignOut</span>
+                <span class="method-start">24961 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27824 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">28836 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginInCRM</span>
+                <span class="method-start">35053 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">54365 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.testcases.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">55248 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testContactsTitle</span>
+                <span class="method-start">111400 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">119441 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">120976 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testcreateContacts(abhi@web.com, Abhi, Patel, Engineer, 3214785124, New)</span>
+                <span class="method-start">157232 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">166016 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">166971 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testcreateContacts(priyal@web.com, Priyal, Patel, Pharma, 1452357894, Open)</span>
+                <span class="method-start">199898 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">209687 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">210771 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testcreateContacts(Deepak@web.com, Deepak, Fatnani, Engineer, 7852469851, In progress)</span>
+                <span class="method-start">228379 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">235703 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">236589 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testcreateContacts(Jaydeep@web.com, Jaydeep, Jani, Engineer, 8742469851, Connected)</span>
+                <span class="method-start">254968 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">262034 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">262942 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testcreateContacts(Khushali@web.com, Khushali, Patel, MBA, 9854712487, Connected)</span>
+                <span class="method-start">280654 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">288862 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">289752 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testIfContactsCreated</span>
+                <span class="method-start">321860 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearUp</span>
+                <span class="method-start">339379 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.testcases.HomeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">340272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testHomePageHeaderDropdownLinks</span>
+                <span class="method-start">352649 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">357552 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">358361 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testHomePageUrl</span>
+                <span class="method-start">370729 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">375540 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
