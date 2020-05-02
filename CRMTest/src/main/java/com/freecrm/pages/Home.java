@@ -3,6 +3,7 @@ package com.freecrm.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,9 +12,10 @@ import com.freecrm.base.TestBase;
 
 public class Home extends TestBase {
 	
-	
-	public Home() {
+	WebDriver driver;
+	public Home(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
 	
 	
@@ -37,7 +39,7 @@ public class Home extends TestBase {
 		log.info("Clicking on Contacts option of Contacts  drop down on Home page.");
 		ContactsOfContactDD.click();
 		log.info("******************Navigating to Contacts Page******************");
-		return new Contacts();
+		return new Contacts(this.driver);
 	}
 	
 	

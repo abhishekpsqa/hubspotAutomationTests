@@ -1,18 +1,17 @@
 package com.crm.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.freecrm.base.TestBase;
-import com.freecrm.pages.Home;
 import com.freecrm.pages.Login;
-
-
-
 public class LoginTest extends TestBase {
+	
+	WebDriver driver;
 	Login loginPage;
-	Home homePage;
 	
 	public  LoginTest() {
 		super();
@@ -20,14 +19,15 @@ public class LoginTest extends TestBase {
 	
 	
 	@BeforeMethod(alwaysRun=true)
-	public void setUp() {
-		initialization();
-		loginPage = new Login();		
+	@Parameters("myBrowser")
+	public void setUp(String myBrowser) {
+		driver = initialization(myBrowser);
+		loginPage = new Login(driver);		
 	}
 	
 	@Test(priority = 1,groups={"Smoke"})
 	public void testLoginInCRM() {
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	

@@ -10,13 +10,14 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.freecrm.utils.TestUtils;
 
 public class TestBase {
 	
 	public Properties prop;
 	public static String path = System.getProperty("user.dir");
-	public static WebDriver driver = null;
+	public  WebDriver driver = null;
 	public Logger log;
 	
 	public TestBase() {
@@ -34,17 +35,17 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-	public void initialization() {
+	public  WebDriver initialization(String myBrowser) {
 		log.info("Reading browser name from config.properties file.");
-		String browser = prop.getProperty("browser");
-		if(browser.equals("chrome")) {
+	//	String browser = prop.getProperty("browser");
+		if(myBrowser.equals("chrome")) {
 			log.info("Opening chrome browser.");
 			System.setProperty("webdriver.chrome.driver", path+"/chromedriver_win32/chromedriver.exe");
 			log.info("Initializing chrome driver.");
 			driver = new ChromeDriver();
-		}else if(browser.equals("FF")) {
+		}else if(myBrowser.equals("FF")) {
 			log.info("Opening firefox browser.");
-			System.setProperty("webdriver.gecko.driver", path+"/geckodriver-v0.26.0-win64/geckodriver");
+			System.setProperty("webdriver.gecko.driver", path+"/geckodriver-v0.26.0-win64/geckodriver.exe");
 			log.info("Initializing Firefox driver.");
 			driver = new FirefoxDriver();
 		}
@@ -57,7 +58,8 @@ public class TestBase {
 		log.info("Page load time out...");
 		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGELOAD_TIMEOUT, TimeUnit.SECONDS);
 		log.info("Implicit wait...");
-		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICITWAIT_TIMEOUT, TimeUnit.SECONDS);	
+		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICITWAIT_TIMEOUT, TimeUnit.SECONDS);
+		return driver;	
 	}
 	
 	

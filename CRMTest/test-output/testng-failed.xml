@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Tests]" parallel="tests">
+  <test thread-count="5" name="Hub spot regression tests on firefox browser(failed)" parallel="tests">
+    <parameter name="myBrowser" value="FF"/>
     <classes>
-      <class name="com.crm.testcases.HomeTest">
+      <class name="com.crm.testcases.CompaniesTest">
         <methods>
+          <include name="testSignOut"/>
           <include name="setUp"/>
-          <include name="testHomePageHeaderDropdownLinks"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.crm.testcases.HomeTest -->
+      </class> <!-- com.crm.testcases.CompaniesTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Hub spot regression tests on firefox browser(failed) -->
+  <test thread-count="5" name="Hub spot regression tests on chrome browser(failed)" parallel="tests">
+    <parameter name="myBrowser" value="chrome"/>
+    <classes>
+      <class name="com.crm.testcases.CompaniesTest">
+        <methods>
+          <include name="testSignOut"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.testcases.CompaniesTest -->
+    </classes>
+  </test> <!-- Hub spot regression tests on chrome browser(failed) -->
+</suite> <!-- Failed suite [Regression Tests] -->

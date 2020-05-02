@@ -1,9 +1,11 @@
 package com.crm.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import com.freecrm.base.TestBase;
@@ -13,16 +15,17 @@ import com.freecrm.pages.Login;
 import com.freecrm.utils.TestUtils;
 
 public class ContactsTest extends TestBase {
-	
+	WebDriver driver;
 	TestUtils utils = new TestUtils();
 	Login loginPage;
 	Home homePage;
 	Contacts contactPage;
 	SoftAssert sa = new SoftAssert();
 	@BeforeMethod(alwaysRun=true)
-	public void setUp() {
-		initialization();
-		loginPage = new Login();
+	@Parameters("myBrowser")
+	public void setUp(String myBrowser) {
+		driver = initialization(myBrowser);
+		loginPage = new Login(driver);
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		homePage.clickOnContactDD();
 		contactPage = homePage.clickOnContactsOfContactDD();

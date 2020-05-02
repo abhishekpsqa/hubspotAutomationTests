@@ -1,6 +1,7 @@
 package com.freecrm.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,12 +11,14 @@ import com.freecrm.base.TestBase;
 import com.freecrm.utils.TestUtils;
 
 public class Contacts extends TestBase {
-
-	Home homePage = new Home();
+	WebDriver driver;
+	Home homePage; 
 	TestUtils utils = new TestUtils();
 
-	public Contacts() {
+	public Contacts(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
+		homePage = new Home(driver);
 	}
 	
 	@FindBy(xpath = "//i18n-string[contains(text(),'Contacts')]")
@@ -154,7 +157,7 @@ public class Contacts extends TestBase {
 		//click on companies
 		log.info("******************Navigating to Companies Page******************");
 		driver.findElement(By.xpath("//li[@class='expandable currentPage active']//*[contains(text(), 'Companies')]")).click();
-		return new Companies();
+		return new Companies(driver);
 		
 	}
 	

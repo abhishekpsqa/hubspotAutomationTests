@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke Tests]">
-  <test thread-count="5" name="Hub spot Smoke tests(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Smoke Tests]">
+  <test thread-count="2" name="Hub spot Smoke tests on chrome browser(failed)">
+    <parameter name="myBrowser" value="chrome"/>
     <groups>
       <run>
         <include name="Smoke"/>
@@ -11,13 +12,17 @@
       <class name="com.crm.testcases.LoginTest">
         <methods>
           <include name="testLoginInCRM"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.crm.testcases.LoginTest -->
       <class name="com.crm.testcases.HomeTest">
         <methods>
+          <include name="setUp"/>
           <include name="testHomePageUrl"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.crm.testcases.HomeTest -->
     </classes>
-  </test> <!-- Hub spot Smoke tests(failed) -->
+  </test> <!-- Hub spot Smoke tests on chrome browser(failed) -->
 </suite> <!-- Failed suite [Smoke Tests] -->

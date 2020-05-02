@@ -1,10 +1,13 @@
 package com.crm.testcases;
 import java.util.Arrays;
 import java.util.List;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import com.freecrm.base.TestBase;
@@ -13,6 +16,8 @@ import com.freecrm.pages.Login;
 import com.freecrm.utils.TestUtils;
 
 public class HomeTest extends TestBase {
+	WebDriver driver;
+	String myBroswer;
 	TestUtils utils = new TestUtils();
 	public HomeTest() {
 		super();
@@ -23,10 +28,12 @@ public class HomeTest extends TestBase {
 	Home homePage;
 	SoftAssert sa= new SoftAssert();
 	@BeforeMethod(alwaysRun=true)
-	public void setUp() {
-		initialization();
-		loginPage = new Login();
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+	@Parameters("myBrowser")
+	public void setUp(String myBrowser) {
+		driver = initialization(myBrowser);
+		loginPage = new Login(driver);
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		homePage = new Home(driver);
 	}
 	
 	@AfterMethod(alwaysRun=true)

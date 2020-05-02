@@ -1,14 +1,15 @@
 package com.freecrm.pages;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.freecrm.base.TestBase;
 public class Login extends TestBase {
-
+	WebDriver driver;
 	//page factory 
-	public Login() {
+	public Login(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
 	
 	@FindBy(id = "hs-login")
@@ -36,7 +37,7 @@ public class Login extends TestBase {
 		log.info("Clicking on Login button of Login Page.");
 		Log_In.click();
 		log.info("******************Navigating to Home Page******************");
-		return new Home();
+		return new Home(driver);
 	}
 
 }
